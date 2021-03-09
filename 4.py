@@ -34,12 +34,14 @@ print(nx,ny)"""
 
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
+#dx,dy 와 LRUD의 순서를 같게 한다.
 move = ['U','D','L','R']
 x = 1
 y = 1
 n=int(input())
 X = list(map(str,input().split()))
 for i in X:
+    # 위의 if문 4개와 완전히 같은 역할을 한다.
     for j in range(len(move)):
         if move[j]==i:
             nx = x+dx[j]
