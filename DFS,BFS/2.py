@@ -23,6 +23,7 @@ bfs특성상 지나간 자리를 다시 지나갈때 값이 작아질 경우는 
 #파이썬으로 bfs가 어색하여 거의 보면서 푼 것에 가까웠음
 #해당 위치까지의 거리만 측정한 것이 아닌 모든 경로에 대한 측정이었음
 #마지막에 해당위치의 거리만 따로 반환하였음.
+"""
 from collections import deque
 
 def bfs(x,y):
@@ -52,3 +53,27 @@ for i in range(n):
 
 cnt = 1
 print(bfs(0,0))
+"""
+#복습
+
+def bfs(x,y):
+    q=deque()
+    q.append((x,y))
+    while q:
+        x,y=q.pop()
+        for i in range(4):
+            nx = x+dx[i]
+            ny = y+dy[i]
+            if(0<=nx<n and 0<=ny<m and g[nx][ny]==1):
+                g[nx][ny]+=g[x][y]
+                q.append((nx,ny))
+
+from collections import deque
+dx = [-1,1,0,0]
+dy = [0,0,-1,1]
+n,m=map(int,input().split())
+g = []
+for i in range(n):
+    g.append(list(map(int,input())))
+bfs(0,0)
+print(g[n-1][m-1])
