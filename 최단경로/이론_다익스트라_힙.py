@@ -202,3 +202,7 @@ for i in range(1,n+1):
     if distance[i]!=INF:
         print(str(i)+': ',end='')
         print(distance[i])
+
+"""
+힙 자료구조를 이용하는 다익스트라 알고리즘의 시간 복잡도는 O(ElogV)
+"""
