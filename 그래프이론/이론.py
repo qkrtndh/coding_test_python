@@ -220,6 +220,8 @@ print(result)
 모든 원소를 방문하기 전에 큐가 빈다면 사이클이 존재한다고 판단할 수 있다.
 
 스택을 활용한 DFS를 이용해 위상정렬을 수행할 수 있다
+
+O=(v+E)
 """
 
 from collections import deque
