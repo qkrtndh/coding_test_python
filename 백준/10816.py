@@ -1,10 +1,10 @@
 from bisect import bisect_left,bisect_right
-
+import sys
 n = int(input())
-arr = list(map(int,input().split()))
+arr = list(map(int,sys.stdin.readline().split()))
 
 m = int(input())
-brr = list(map(int,input().split()))
+brr = list(map(int,sys.stdin.readline().split()))
 
 arr.sort()
 for i in range(m):
