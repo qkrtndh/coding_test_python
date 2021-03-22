@@ -17,7 +17,7 @@ def bfs(q):
             ny = y+dy[i]
             nx = x+dx[i]
             if 0 <= nh < h and 0 <= ny < n and 0 <= nx < m:
-                if arr[nh][ny][nx] == 0:
+                if arr[nh][ny][nx] == 0 or arr[nh][ny][nx]>arr[z][y][x]+1:
                     arr[nh][ny][nx] = arr[z][y][x]+1
                     q.append((nh,ny,nx))
 
@@ -30,4 +30,12 @@ for i in range(h):
             if arr[i][j][k]==1:
                 q.append((i,j,k))
                 bfs(q)
-print(max(arr))
+
+result = 0
+for i in range(h):
+    for j in range(n):
+        result = max(result,max(arr[i][j]))
+        if 0 in arr[i][j]:
+            result=0
+            break
+print(result-1)
