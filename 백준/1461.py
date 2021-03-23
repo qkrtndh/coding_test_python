@@ -11,4 +11,3 @@ plus.sort()
 switch = 0
 if max(plus)<min(minus)*(-1):
     if len(plus)%m!=0:
-        
