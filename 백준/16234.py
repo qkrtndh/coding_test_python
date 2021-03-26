@@ -41,6 +41,7 @@ while s==1:
                     k = sum([arr[a][b]for a, b in temp])//len(temp)
                     for a,b in temp:
                         arr[a][b]=k
-    
+    if s==0:
+        break
                 
 print(cnt)
