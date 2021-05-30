@@ -1,4 +1,5 @@
 <H1>1058</H1>
+
 ![image](https://user-images.githubusercontent.com/65153512/120090568-9fea5600-c13e-11eb-9392-656631d33914.png)
 
 친구 관계가 배열로 입력되며
